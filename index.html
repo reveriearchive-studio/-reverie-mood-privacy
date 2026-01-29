@@ -5,112 +5,474 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Reverie Mood - Privacy Policy</title>
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Source+Serif+4:ital,wght@0,400;0,600;1,400&family=JetBrains+Mono:wght@400;500&display=swap');
+
+        :root {
+            --cream-bg: #F5DFC4;
+            --warm-surface: #FFF9F0;
+            --paper-white: #FDF8F3;
+            --text-primary: #1C1917;
+            --text-secondary: #57534E;
+            --text-tertiary: #A8A29E;
+            --accent-red: #91222C;
+            --accent-gold: #D3A345;
+            --accent-sepia: #A67C52;
+            --border-light: #E7E5E4;
+            --border-strong: #D6D3D1;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
         body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-            line-height: 1.6;
-            max-width: 800px;
+            font-family: 'Source Serif 4', Georgia, 'Times New Roman', serif;
+            line-height: 1.7;
+            max-width: 720px;
             margin: 0 auto;
-            padding: 20px;
-            color: #333;
+            padding: 40px 24px 60px;
+            background: var(--cream-bg);
+            color: var(--text-primary);
         }
-        h1 {
-            color: #2c3e50;
-            border-bottom: 3px solid #3498db;
-            padding-bottom: 10px;
+
+        /* Masthead Header */
+        .masthead {
+            text-align: center;
+            padding-bottom: 32px;
+            margin-bottom: 40px;
         }
+
+        .masthead-label {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 9px;
+            font-weight: 500;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            color: var(--text-tertiary);
+            margin-bottom: 8px;
+        }
+
+        .masthead-title {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: 28px;
+            font-weight: 700;
+            letter-spacing: 1px;
+            color: var(--text-primary);
+            margin: 8px 0;
+        }
+
+        .masthead-subtitle {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 10px;
+            font-weight: 500;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            color: var(--text-tertiary);
+        }
+
+        .double-rule {
+            display: flex;
+            flex-direction: column;
+            gap: 3px;
+            margin: 20px auto 0;
+            width: 200px;
+        }
+
+        .double-rule .thick {
+            height: 2px;
+            background: var(--border-strong);
+        }
+
+        .double-rule .thin {
+            height: 0.5px;
+            background: var(--border-strong);
+        }
+
+        .edition-date {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 10px;
+            font-weight: 500;
+            letter-spacing: 2px;
+            color: var(--text-secondary);
+            margin-top: 16px;
+        }
+
+        /* Section Headers */
         h2 {
-            color: #34495e;
-            margin-top: 30px;
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: 18px;
+            font-weight: 600;
+            color: var(--text-primary);
+            margin: 36px 0 16px;
+            padding-bottom: 8px;
+            border-bottom: 1px solid var(--border-light);
         }
+
         h3 {
-            color: #555;
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 11px;
+            font-weight: 500;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: var(--text-secondary);
+            margin: 24px 0 12px;
         }
-        .summary {
-            background-color: #f8f9fa;
-            border-left: 4px solid #3498db;
-            padding: 15px 20px;
+
+        /* Body Text */
+        p {
+            font-size: 16px;
+            color: var(--text-secondary);
+            margin: 12px 0;
+        }
+
+        strong {
+            color: var(--text-primary);
+            font-weight: 600;
+        }
+
+        em {
+            font-style: italic;
+        }
+
+        a {
+            color: var(--accent-red);
+            text-decoration: none;
+            border-bottom: 1px solid transparent;
+            transition: border-color 0.2s ease;
+        }
+
+        a:hover {
+            border-bottom-color: var(--accent-red);
+        }
+
+        /* Summary Card */
+        .summary-card {
+            background: var(--warm-surface);
+            border: 1px solid var(--border-light);
+            border-radius: 8px;
+            padding: 24px 28px;
+            margin: 24px 0;
+        }
+
+        .summary-card h3 {
+            margin-top: 0;
+            color: var(--accent-sepia);
+        }
+
+        .summary-card .headline {
+            font-family: 'Source Serif 4', Georgia, serif;
+            font-size: 17px;
+            font-weight: 600;
+            color: var(--text-primary);
+            font-style: italic;
+            margin: 0 0 16px;
+        }
+
+        .check-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .check-list li {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 12px;
+            color: var(--text-secondary);
+            padding: 6px 0;
+            padding-left: 24px;
+            position: relative;
+        }
+
+        .check-list li::before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: var(--accent-sepia);
+            font-weight: 600;
+        }
+
+        .cross-list li::before {
+            content: "✕";
+            color: var(--text-tertiary);
+        }
+
+        /* Standard Lists */
+        ul {
+            padding-left: 20px;
+            margin: 12px 0;
+        }
+
+        li {
+            font-size: 15px;
+            color: var(--text-secondary);
+            padding: 4px 0;
+        }
+
+        li strong {
+            color: var(--text-primary);
+        }
+
+        /* Permission Cards */
+        .permission-grid {
+            display: grid;
+            gap: 16px;
             margin: 20px 0;
         }
-        .highlight {
-            background-color: #fff3cd;
-            padding: 2px 6px;
-            border-radius: 3px;
-        }
-        ul {
-            line-height: 1.8;
-        }
-        .contact {
-            background-color: #e8f4f8;
+
+        .permission-card {
+            background: var(--paper-white);
+            border: 1px solid var(--border-light);
+            border-radius: 6px;
             padding: 20px;
-            border-radius: 8px;
-            margin-top: 30px;
         }
+
+        .permission-card .icon {
+            font-size: 20px;
+            margin-bottom: 8px;
+        }
+
+        .permission-card .title {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 11px;
+            font-weight: 500;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            color: var(--text-primary);
+            margin-bottom: 8px;
+        }
+
+        .permission-card p {
+            font-size: 14px;
+            margin: 4px 0;
+        }
+
+        .permission-card .label {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 10px;
+            font-weight: 500;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            color: var(--text-tertiary);
+        }
+
+        /* Disclaimer Box */
+        .disclaimer {
+            background: var(--warm-surface);
+            border-left: 3px solid var(--accent-gold);
+            padding: 20px 24px;
+            margin: 24px 0;
+            border-radius: 0 6px 6px 0;
+        }
+
+        .disclaimer p {
+            margin: 0;
+            font-style: italic;
+        }
+
+        /* Contact Section */
+        .contact-section {
+            background: var(--warm-surface);
+            border: 1px solid var(--border-light);
+            border-radius: 8px;
+            padding: 28px;
+            margin-top: 40px;
+            text-align: center;
+        }
+
+        .contact-section h2 {
+            border: none;
+            margin-top: 0;
+            padding-bottom: 0;
+        }
+
+        .contact-section .subtitle {
+            font-family: 'Source Serif 4', Georgia, serif;
+            font-size: 15px;
+            font-style: italic;
+            color: var(--text-tertiary);
+            margin-bottom: 20px;
+        }
+
+        .contact-details {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 12px;
+            line-height: 2;
+            color: var(--text-secondary);
+        }
+
+        .contact-details .label {
+            font-size: 10px;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            color: var(--text-tertiary);
+        }
+
+        .contact-details a {
+            color: var(--accent-red);
+        }
+
+        /* Footer */
         .footer {
             text-align: center;
-            margin-top: 40px;
-            padding-top: 20px;
-            border-top: 1px solid #ddd;
-            color: #777;
-            font-size: 0.9em;
+            margin-top: 48px;
+            padding-top: 24px;
+        }
+
+        .footer .rule {
+            display: flex;
+            flex-direction: column;
+            gap: 3px;
+            margin: 0 auto 20px;
+            width: 120px;
+        }
+
+        .footer p {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 10px;
+            letter-spacing: 2px;
+            color: var(--text-tertiary);
+        }
+
+        .footer .tagline {
+            font-family: 'Source Serif 4', Georgia, serif;
+            font-size: 13px;
+            font-style: italic;
+            color: var(--text-tertiary);
+            margin-top: 8px;
+        }
+
+        /* Code/Path styling */
+        code {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 12px;
+            background: var(--paper-white);
+            padding: 2px 6px;
+            border-radius: 3px;
+            color: var(--text-secondary);
+        }
+
+        /* Responsive */
+        @media (max-width: 600px) {
+            body {
+                padding: 24px 16px 40px;
+            }
+
+            .masthead-title {
+                font-size: 24px;
+            }
+
+            .summary-card, .contact-section {
+                padding: 20px;
+            }
+        }
+
+        /* Dark mode support */
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --cream-bg: #1C1917;
+                --warm-surface: #292524;
+                --paper-white: #3D3836;
+                --text-primary: #F5F5F4;
+                --text-secondary: #A8A29E;
+                --text-tertiary: #78716C;
+                --accent-red: #DC2626;
+                --accent-gold: #D4A574;
+                --accent-sepia: #C9A77C;
+                --border-light: #3D3836;
+                --border-strong: #57534E;
+            }
         }
     </style>
 </head>
 <body>
-    <h1>Privacy Policy for Reverie Mood</h1>
-    <p><strong>Last Updated: December 29, 2024</strong></p>
+    <!-- Masthead -->
+    <header class="masthead">
+        <div class="masthead-label">The Official Privacy Statement of</div>
+        <h1 class="masthead-title">Reverie Mood</h1>
+        <div class="masthead-subtitle">Your Private Emotional Gazette</div>
+        <div class="double-rule">
+            <div class="thick"></div>
+            <div class="thin"></div>
+        </div>
+        <div class="edition-date">Last Updated · December 29, 2024</div>
+    </header>
 
-    <div class="summary">
-        <h3>Quick Summary</h3>
-        <p><strong>Your data stays on your device. We don't collect, share, or sell anything.</strong></p>
-        <ul>
-            <li>✓ All data stored locally on your device</li>
-            <li>✓ No servers, no cloud uploads (except optional iCloud backup)</li>
-            <li>✓ No tracking or analytics</li>
-            <li>✓ No advertisements</li>
-            <li>✓ You control everything</li>
+    <!-- Quick Summary -->
+    <div class="summary-card">
+        <h3>At a Glance</h3>
+        <p class="headline">"Your data stays on your device. We don't collect, share, or sell anything."</p>
+        <ul class="check-list">
+            <li>All data stored locally on your device</li>
+            <li>No servers, no cloud uploads</li>
+            <li>No tracking or analytics</li>
+            <li>No advertisements</li>
+            <li>You control everything</li>
         </ul>
     </div>
 
-    <h2>Introduction</h2>
-    <p>Reverie Mood is a privacy-first mood tracking app. We believe your mental health data should remain private and under your control.</p>
+    <!-- Introduction -->
+    <h2>Our Philosophy</h2>
+    <p>Reverie Mood is a privacy-first mood tracking journal. We believe your mental health data should remain private and entirely under your control. Your emotional reflections are yours alone.</p>
 
-    <h2>What Data We Store</h2>
-    <h3>On Your Device Only:</h3>
+    <!-- What We Store -->
+    <h2>What We Store</h2>
+    <h3>On Your Device Only</h3>
     <ul>
-        <li><strong>Mood Entries</strong> - Your daily emotional states</li>
-        <li><strong>Written Reflections</strong> - Text notes about your feelings</li>
-        <li><strong>Voice Memos</strong> - Audio recordings (morning and evening)</li>
-        <li><strong>Grounding Exercises</strong> - Wellness activity records</li>
-        <li><strong>App Settings</strong> - Your preferences and customizations</li>
+        <li><strong>Mood Entries</strong> — Your daily emotional states</li>
+        <li><strong>Written Reflections</strong> — Text notes about your feelings</li>
+        <li><strong>Voice Memos</strong> — Audio recordings (morning and evening)</li>
+        <li><strong>Grounding Exercises</strong> — Wellness activity records</li>
+        <li><strong>App Settings</strong> — Your preferences and customizations</li>
     </ul>
 
-    <h2>What We DON'T Do</h2>
-    <ul>
-        <li>❌ We don't send your data to our servers (we don't have servers)</li>
-        <li>❌ We don't use analytics or tracking</li>
-        <li>❌ We don't share data with third parties</li>
-        <li>❌ We don't sell your information</li>
-        <li>❌ We don't display advertisements</li>
+    <!-- What We Don't Do -->
+    <h2>What We Don't Do</h2>
+    <ul class="check-list cross-list">
+        <li>We don't send your data to any servers</li>
+        <li>We don't use analytics or tracking</li>
+        <li>We don't share data with third parties</li>
+        <li>We don't sell your information</li>
+        <li>We don't display advertisements</li>
     </ul>
 
+    <!-- Permissions -->
     <h2>Permissions We Request</h2>
-    
-    <h3>🎤 Microphone Access</h3>
-    <p><strong>Why:</strong> To record voice memos and enable voice-to-text transcription<br>
-    <strong>How it works:</strong> Audio is processed and stored only on your device</p>
+    <div class="permission-grid">
+        <div class="permission-card">
+            <div class="icon">🎙</div>
+            <div class="title">Microphone Access</div>
+            <p><span class="label">Purpose:</span> Record voice memos and enable voice-to-text</p>
+            <p><span class="label">Processing:</span> Audio stored only on your device</p>
+        </div>
 
-    <h3>🗣️ Speech Recognition</h3>
-    <p><strong>Why:</strong> To convert spoken words into text during reflection entry<br>
-    <strong>How it works:</strong> Apple's on-device speech recognition processes audio locally</p>
+        <div class="permission-card">
+            <div class="icon">💬</div>
+            <div class="title">Speech Recognition</div>
+            <p><span class="label">Purpose:</span> Convert spoken words into journal text</p>
+            <p><span class="label">Processing:</span> Apple's on-device recognition, processed locally</p>
+        </div>
 
-    <h3>🔔 Notifications (Optional)</h3>
-    <p><strong>Why:</strong> To remind you to log your daily mood<br>
-    <strong>How it works:</strong> Scheduled locally on your device, no external services</p>
+        <div class="permission-card">
+            <div class="icon">📷</div>
+            <div class="title">Camera & Photos</div>
+            <p><span class="label">Purpose:</span> Attach photos to mood entries</p>
+            <p><span class="label">Processing:</span> Images stored privately on your device</p>
+        </div>
 
+        <div class="permission-card">
+            <div class="icon">🔔</div>
+            <div class="title">Notifications</div>
+            <p><span class="label">Purpose:</span> Gentle daily reminders to journal</p>
+            <p><span class="label">Processing:</span> Scheduled locally, no external services</p>
+        </div>
+    </div>
+
+    <!-- iCloud -->
     <h2>iCloud Backup</h2>
     <p>If you have iCloud Backup enabled on your iOS device, Reverie Mood data <em>may</em> be included in your backup. This is controlled by your device settings:</p>
-    <p><strong>iOS Settings → [Your Name] → iCloud → Manage Storage → Backups</strong></p>
+    <p><code>Settings → [Your Name] → iCloud → Manage Storage → Backups</code></p>
 
+    <!-- Data Deletion -->
     <h2>Data Deletion</h2>
     <p>You can delete your data at any time:</p>
     <ul>
@@ -119,32 +481,46 @@
         <li>Uninstalling the app permanently deletes all local data</li>
     </ul>
 
+    <!-- Children's Privacy -->
     <h2>Children's Privacy</h2>
     <p>Reverie Mood is not intended for children under 13. We do not knowingly collect information from children.</p>
 
+    <!-- Disclaimer -->
     <h2>Important Disclaimer</h2>
-    <div class="summary">
+    <div class="disclaimer">
         <p><strong>Reverie Mood is not a medical app.</strong> It's designed for personal wellness tracking only. If you're experiencing mental health concerns, please consult a qualified healthcare professional.</p>
     </div>
 
+    <!-- Changes -->
     <h2>Changes to This Policy</h2>
-    <p>We may update this policy occasionally. Changes will be reflected with an updated "Last Updated" date at the top of this page.</p>
+    <p>We may update this policy occasionally. Changes will be reflected with an updated date at the top of this page.</p>
 
+    <!-- Third Party -->
     <h2>Third-Party Services</h2>
     <p>Reverie Mood uses Apple's native frameworks (SwiftData, Speech Recognition, AVFoundation) which are subject to <a href="https://www.apple.com/legal/privacy/">Apple's Privacy Policy</a>.</p>
 
-    <div class="contact">
-        <h2>Contact Us</h2>
-        <p>Questions about this Privacy Policy?</p>
-        <p>
-            <strong>Email:</strong> [reveriearchive.studio@gmail.com]<br>
-            <strong>Developer:</strong> Antheia Li<br>
-            <strong>App:</strong> Reverie Mood
-        </p>
+    <!-- Contact -->
+    <div class="contact-section">
+        <h2>Contact the Editor</h2>
+        <p class="subtitle">Questions about this Privacy Policy?</p>
+        <div class="contact-details">
+            <span class="label">Email</span><br>
+            <a href="mailto:reveriearchive.studio@gmail.com">reveriearchive.studio@gmail.com</a><br><br>
+            <span class="label">Developer</span><br>
+            Antheia Li<br><br>
+            <span class="label">Application</span><br>
+            Reverie Mood
+        </div>
     </div>
 
-    <div class="footer">
-        <p>© 2024 Reverie Mood. Your privacy matters.</p>
-    </div>
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="rule">
+            <div class="thick"></div>
+            <div class="thin"></div>
+        </div>
+        <p>© 2024 REVERIE MOOD</p>
+        <p class="tagline">Your privacy matters.</p>
+    </footer>
 </body>
 </html>
