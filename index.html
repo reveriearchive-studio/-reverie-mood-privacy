@@ -8,15 +8,14 @@
         @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Source+Serif+4:ital,wght@0,400;0,600;1,400&family=JetBrains+Mono:wght@400;500&display=swap');
 
         :root {
-            --cream-bg: #F5DFC4;
-            --warm-surface: #FFF9F0;
-            --paper-white: #FDF8F3;
+            --bg: #FAF8F5;
+            --surface: #F5F3F0;
+            --surface-raised: #FFFFFF;
             --text-primary: #1C1917;
             --text-secondary: #57534E;
             --text-tertiary: #A8A29E;
             --accent-red: #91222C;
-            --accent-gold: #D3A345;
-            --accent-sepia: #A67C52;
+            --accent-warm: #B8977A;
             --border-light: #E7E5E4;
             --border-strong: #D6D3D1;
         }
@@ -27,11 +26,11 @@
 
         body {
             font-family: 'Source Serif 4', Georgia, 'Times New Roman', serif;
-            line-height: 1.7;
-            max-width: 720px;
+            line-height: 1.75;
+            max-width: 680px;
             margin: 0 auto;
-            padding: 40px 24px 60px;
-            background: var(--cream-bg);
+            padding: 48px 24px 64px;
+            background: var(--bg);
             color: var(--text-primary);
         }
 
@@ -93,7 +92,7 @@
             font-size: 10px;
             font-weight: 500;
             letter-spacing: 2px;
-            color: var(--text-secondary);
+            color: var(--text-tertiary);
             margin-top: 16px;
         }
 
@@ -103,7 +102,7 @@
             font-size: 18px;
             font-weight: 600;
             color: var(--text-primary);
-            margin: 36px 0 16px;
+            margin: 40px 0 16px;
             padding-bottom: 8px;
             border-bottom: 1px solid var(--border-light);
         }
@@ -120,7 +119,7 @@
 
         /* Body Text */
         p {
-            font-size: 16px;
+            font-size: 15.5px;
             color: var(--text-secondary);
             margin: 12px 0;
         }
@@ -147,7 +146,7 @@
 
         /* Summary Card */
         .summary-card {
-            background: var(--warm-surface);
+            background: var(--surface-raised);
             border: 1px solid var(--border-light);
             border-radius: 8px;
             padding: 24px 28px;
@@ -156,7 +155,7 @@
 
         .summary-card h3 {
             margin-top: 0;
-            color: var(--accent-sepia);
+            color: var(--accent-warm);
         }
 
         .summary-card .headline {
@@ -187,7 +186,7 @@
             content: "✓";
             position: absolute;
             left: 0;
-            color: var(--accent-sepia);
+            color: var(--accent-warm);
             font-weight: 600;
         }
 
@@ -215,12 +214,12 @@
         /* Permission Cards */
         .permission-grid {
             display: grid;
-            gap: 16px;
+            gap: 12px;
             margin: 20px 0;
         }
 
         .permission-card {
-            background: var(--paper-white);
+            background: var(--surface-raised);
             border: 1px solid var(--border-light);
             border-radius: 6px;
             padding: 20px;
@@ -257,8 +256,8 @@
 
         /* Disclaimer Box */
         .disclaimer {
-            background: var(--warm-surface);
-            border-left: 3px solid var(--accent-gold);
+            background: var(--surface);
+            border-left: 3px solid var(--accent-warm);
             padding: 20px 24px;
             margin: 24px 0;
             border-radius: 0 6px 6px 0;
@@ -271,7 +270,7 @@
 
         /* Contact Section */
         .contact-section {
-            background: var(--warm-surface);
+            background: var(--surface-raised);
             border: 1px solid var(--border-light);
             border-radius: 8px;
             padding: 28px;
@@ -345,7 +344,7 @@
         code {
             font-family: 'JetBrains Mono', monospace;
             font-size: 12px;
-            background: var(--paper-white);
+            background: var(--surface);
             padding: 2px 6px;
             border-radius: 3px;
             color: var(--text-secondary);
@@ -369,15 +368,14 @@
         /* Dark mode support */
         @media (prefers-color-scheme: dark) {
             :root {
-                --cream-bg: #1C1917;
-                --warm-surface: #292524;
-                --paper-white: #3D3836;
+                --bg: #1C1917;
+                --surface: #252220;
+                --surface-raised: #2C2926;
                 --text-primary: #F5F5F4;
                 --text-secondary: #A8A29E;
                 --text-tertiary: #78716C;
                 --accent-red: #DC2626;
-                --accent-gold: #D4A574;
-                --accent-sepia: #C9A77C;
+                --accent-warm: #C9A77C;
                 --border-light: #3D3836;
                 --border-strong: #57534E;
             }
@@ -394,7 +392,7 @@
             <div class="thick"></div>
             <div class="thin"></div>
         </div>
-        <div class="edition-date">Last Updated · January 28, 2026</div>
+        <div class="edition-date">Last Updated · February 10, 2026</div>
     </header>
 
     <!-- Quick Summary -->
