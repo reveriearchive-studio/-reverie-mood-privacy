@@ -419,7 +419,10 @@
         <li><strong>Mood Entries</strong> — Your daily emotional states</li>
         <li><strong>Written Reflections</strong> — Text notes about your feelings</li>
         <li><strong>Voice Memos</strong> — Audio recordings (morning and evening)</li>
-        <li><strong>Grounding Exercises</strong> — Wellness activity records</li>
+        <li><strong>Photos</strong> — Images you attach to mood entries</li>
+        <li><strong>Doodles</strong> — Sketches and drawings from the doodle canvas</li>
+        <li><strong>Grounding & Breathing Exercises</strong> — Wellness activity records and progress</li>
+        <li><strong>Companion Data</strong> — Your Puff companion's name and your display name</li>
         <li><strong>App Settings</strong> — Your preferences and customizations</li>
     </ul>
 
@@ -439,15 +442,8 @@
         <div class="permission-card">
             <div class="icon">🎙</div>
             <div class="title">Microphone Access</div>
-            <p><span class="label">Purpose:</span> Record voice memos and enable voice-to-text</p>
+            <p><span class="label">Purpose:</span> Record voice memos for your daily reflections</p>
             <p><span class="label">Processing:</span> Audio stored only on your device</p>
-        </div>
-
-        <div class="permission-card">
-            <div class="icon">💬</div>
-            <div class="title">Speech Recognition</div>
-            <p><span class="label">Purpose:</span> Convert spoken words into journal text</p>
-            <p><span class="label">Processing:</span> Apple's on-device recognition, processed locally</p>
         </div>
 
         <div class="permission-card">
@@ -466,16 +462,20 @@
     </div>
 
     <!-- iCloud -->
-    <h2>iCloud Backup</h2>
-    <p>If you have iCloud Backup enabled on your iOS device, Reverie Mood data <em>may</em> be included in your backup. This is controlled by your device settings:</p>
+    <h2>iCloud & Backups</h2>
+    <h3>In-App Backup (Optional)</h3>
+    <p>Reverie Mood offers an optional backup feature that saves your journal data to your private iCloud Drive. These backups are stored in your personal Apple account and are not accessible to us. You can create, restore, and delete backups at any time from within the app.</p>
+    <h3>Device-Level iCloud Backup</h3>
+    <p>If you have iCloud Backup enabled on your iOS device, Reverie Mood data <em>may</em> also be included in your device backup. This is controlled by your device settings:</p>
     <p><code>Settings → [Your Name] → iCloud → Manage Storage → Backups</code></p>
 
     <!-- Data Deletion -->
     <h2>Data Deletion</h2>
     <p>You can delete your data at any time:</p>
     <ul>
-        <li>Delete individual entries from the archive view</li>
+        <li>Delete individual entries (including photos and doodles) from the archive view</li>
         <li>Delete voice memos from entry details</li>
+        <li>Delete iCloud Drive backups from the backup manager</li>
         <li>Uninstalling the app permanently deletes all local data</li>
     </ul>
 
@@ -495,7 +495,7 @@
 
     <!-- Third Party -->
     <h2>Third-Party Services</h2>
-    <p>Reverie Mood uses Apple's native frameworks (SwiftData, Speech Recognition, AVFoundation) which are subject to <a href="https://www.apple.com/legal/privacy/">Apple's Privacy Policy</a>.</p>
+    <p>Reverie Mood uses Apple's native frameworks (SwiftData, AVFoundation) which are subject to <a href="https://www.apple.com/legal/privacy/">Apple's Privacy Policy</a>.</p>
 
     <!-- Contact -->
     <div class="contact-section">
