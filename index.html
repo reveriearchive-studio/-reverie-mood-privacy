@@ -16,6 +16,7 @@
             --text-tertiary: #A8A29E;
             --accent-red: #91222C;
             --accent-warm: #B8977A;
+            --accent-teal: #5B8A8A;
             --border-light: #E7E5E4;
             --border-strong: #D6D3D1;
         }
@@ -183,7 +184,7 @@
         }
 
         .check-list li::before {
-            content: "✓";
+            content: "\2713";
             position: absolute;
             left: 0;
             color: var(--accent-warm);
@@ -191,7 +192,7 @@
         }
 
         .cross-list li::before {
-            content: "✕";
+            content: "\2715";
             color: var(--text-tertiary);
         }
 
@@ -252,6 +253,38 @@
             letter-spacing: 1px;
             text-transform: uppercase;
             color: var(--text-tertiary);
+        }
+
+        /* Feature Card */
+        .feature-card {
+            background: var(--surface-raised);
+            border: 1px solid var(--border-light);
+            border-radius: 8px;
+            padding: 24px 28px;
+            margin: 20px 0;
+        }
+
+        .feature-card h3 {
+            margin-top: 0;
+            color: var(--accent-teal);
+        }
+
+        .feature-card p {
+            font-size: 14.5px;
+        }
+
+        .encrypted-badge {
+            display: inline-block;
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 10px;
+            font-weight: 500;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            color: var(--accent-teal);
+            background: var(--surface);
+            padding: 3px 8px;
+            border-radius: 4px;
+            border: 1px solid var(--border-light);
         }
 
         /* Disclaimer Box */
@@ -360,7 +393,7 @@
                 font-size: 24px;
             }
 
-            .summary-card, .contact-section {
+            .summary-card, .contact-section, .feature-card {
                 padding: 20px;
             }
         }
@@ -376,6 +409,7 @@
                 --text-tertiary: #78716C;
                 --accent-red: #DC2626;
                 --accent-warm: #C9A77C;
+                --accent-teal: #7CB8B8;
                 --border-light: #3D3836;
                 --border-strong: #57534E;
             }
@@ -392,17 +426,17 @@
             <div class="thick"></div>
             <div class="thin"></div>
         </div>
-        <div class="edition-date">Last Updated · February 10, 2026</div>
+        <div class="edition-date">Last Updated · March 10, 2026</div>
     </header>
 
     <!-- Quick Summary -->
     <div class="summary-card">
         <h3>At a Glance</h3>
-        <p class="headline">"Your data stays on your device. We don't collect, share, or sell anything."</p>
+        <p class="headline">"Your journal stays on your device. Shared letters travel only through Apple's encrypted cloud."</p>
         <ul class="check-list">
-            <li>All data stored locally on your device</li>
-            <li>No servers, no cloud uploads</li>
-            <li>No tracking or analytics</li>
+            <li>Journal data stored locally on your device</li>
+            <li>No third-party servers, analytics, or tracking</li>
+            <li>Shared Cove letters are end-to-end encrypted via iCloud</li>
             <li>No advertisements</li>
             <li>You control everything</li>
         </ul>
@@ -411,6 +445,7 @@
     <!-- Introduction -->
     <h2>Our Philosophy</h2>
     <p>Reverie Mood, a product of Reverie Archive, is a privacy-first mood tracking journal. We believe your mental health data should remain private and entirely under your control. Your emotional reflections are yours alone.</p>
+    <p>With the introduction of <em>Letters to the Ether</em>, you may choose to exchange letters with a close friend through the Shared Cove. This is the only feature that transmits data beyond your device, and it does so exclusively through Apple's iCloud infrastructure with end-to-end encryption for all letter content.</p>
 
     <!-- What We Store -->
     <h2>What We Store</h2>
@@ -422,18 +457,60 @@
         <li><strong>Photos</strong> — Images you attach to mood entries</li>
         <li><strong>Doodles</strong> — Sketches and drawings from the doodle canvas</li>
         <li><strong>Grounding & Breathing Exercises</strong> — Wellness activity records and progress</li>
+        <li><strong>Letters Desk Postcards</strong> — Personal postcards you compose, keep, release, or burn (never leave your device)</li>
         <li><strong>Companion Data</strong> — Your Puff companion's name and your display name</li>
         <li><strong>App Settings</strong> — Your preferences and customizations</li>
     </ul>
 
+    <!-- Letters to the Ether -->
+    <h2>Letters to the Ether</h2>
+    <p>Feature No.05 in the Quiet Room introduces two spaces for reflective writing. Each handles your data differently:</p>
+
+    <div class="feature-card">
+        <h3>The Letters Desk</h3>
+        <p>A private writing space where you compose postcards for yourself. You can keep them, release them to the ether, or burn them as a cathartic release.</p>
+        <p><strong>All postcards are stored locally on your device only.</strong> Nothing is transmitted. Burned postcards are permanently deleted — only a count is kept for your personal statistics.</p>
+    </div>
+
+    <div class="feature-card">
+        <h3>The Shared Cove</h3>
+        <p>A quiet space to exchange handwritten-style letters with one close friend. You create a private cove by sharing a QR code, and letters drift between you like messages in bottles.</p>
+        <p>This is the only feature in Reverie Mood that sends data beyond your device. All data travels exclusively through <strong>Apple's iCloud (CloudKit)</strong> — we operate no servers of our own.</p>
+
+        <p style="margin-top: 16px;"><span class="encrypted-badge">End-to-End Encrypted</span></p>
+        <ul>
+            <li><strong>Letter content</strong> — encrypted via CloudKit's <code>encryptedValues</code>; only you and your friend can read them</li>
+            <li><strong>Whisper replies</strong> — short inline replies, also end-to-end encrypted</li>
+        </ul>
+
+        <h3 style="margin-top: 20px;">Shared but Not Encrypted</h3>
+        <p>The following metadata is stored in iCloud to enable the feature but is <em>not</em> end-to-end encrypted (Apple may access it under their privacy policy):</p>
+        <ul>
+            <li><strong>Display names & emoji avatars</strong> — chosen by you, not your real name or Apple ID</li>
+            <li><strong>Letter categories & delivery mode</strong> — e.g. "freeform" or "drift delivery"</li>
+            <li><strong>Empathy reactions</strong> — e.g. "sending warmth" (5 preset types, no free text)</li>
+            <li><strong>Timestamps</strong> — when letters were sent, delivered, and read</li>
+            <li><strong>Mood snapshots</strong> — your mood shared with your friend (<strong>opt-in, off by default</strong>)</li>
+        </ul>
+
+        <h3 style="margin-top: 20px;">Your Controls</h3>
+        <ul>
+            <li><strong>Mood sharing</strong> — opt-in, disabled by default. Toggle per cove.</li>
+            <li><strong>Read receipts</strong> — can be disabled per cove</li>
+            <li><strong>Leave Cove</strong> — permanently deletes all shared data from iCloud for both participants</li>
+            <li><strong>Block a friend</strong> — prevents reconnection and removes shared data</li>
+        </ul>
+    </div>
+
     <!-- What We Don't Do -->
     <h2>What We Don't Do</h2>
     <ul class="check-list cross-list">
-        <li>We don't send your data to any servers</li>
+        <li>We don't operate any servers — Shared Cove uses Apple's iCloud only</li>
         <li>We don't use analytics or tracking</li>
         <li>We don't share data with third parties</li>
         <li>We don't sell your information</li>
         <li>We don't display advertisements</li>
+        <li>We cannot read your encrypted letters or whispers</li>
     </ul>
 
     <!-- Permissions -->
@@ -449,15 +526,22 @@
         <div class="permission-card">
             <div class="icon">📷</div>
             <div class="title">Camera & Photos</div>
-            <p><span class="label">Purpose:</span> Attach photos to mood entries</p>
+            <p><span class="label">Purpose:</span> Attach photos to mood entries and scan Shared Cove QR codes</p>
             <p><span class="label">Processing:</span> Images stored privately on your device</p>
         </div>
 
         <div class="permission-card">
             <div class="icon">🔔</div>
             <div class="title">Notifications</div>
-            <p><span class="label">Purpose:</span> Gentle daily reminders to journal</p>
-            <p><span class="label">Processing:</span> Scheduled locally, no external services</p>
+            <p><span class="label">Purpose:</span> Daily journal reminders and Shared Cove letter arrival alerts</p>
+            <p><span class="label">Processing:</span> Journal reminders scheduled locally; Cove notifications delivered via Apple's silent push through iCloud</p>
+        </div>
+
+        <div class="permission-card">
+            <div class="icon">☁️</div>
+            <div class="title">iCloud Account</div>
+            <p><span class="label">Purpose:</span> Required for Shared Cove letter exchange</p>
+            <p><span class="label">Processing:</span> Uses your iCloud identity (an opaque ID, not your email or name) to connect with your friend</p>
         </div>
     </div>
 
@@ -465,6 +549,8 @@
     <h2>iCloud & Backups</h2>
     <h3>In-App Backup (Optional)</h3>
     <p>Reverie Mood offers an optional backup feature that saves your journal data to your private iCloud Drive. These backups are stored in your personal Apple account and are not accessible to us. You can create, restore, and delete backups at any time from within the app.</p>
+    <h3>Shared Cove (CloudKit)</h3>
+    <p>The Shared Cove uses Apple's CloudKit to sync letters between you and your friend. Letter content and whisper replies are end-to-end encrypted — neither Apple nor Reverie Archive can read them. This data exists only within a private shared zone in iCloud and is permanently deleted when either participant leaves the cove.</p>
     <h3>Device-Level iCloud Backup</h3>
     <p>If you have iCloud Backup enabled on your iOS device, Reverie Mood data <em>may</em> also be included in your device backup. This is controlled by your device settings:</p>
     <p><code>Settings → [Your Name] → iCloud → Manage Storage → Backups</code></p>
@@ -476,6 +562,9 @@
         <li>Delete individual entries (including photos and doodles) from the archive view</li>
         <li>Delete voice memos from entry details</li>
         <li>Delete iCloud Drive backups from the backup manager</li>
+        <li>Delete Letters Desk postcards individually or let released postcards expire after 180 days</li>
+        <li><strong>Leave a Shared Cove</strong> to permanently delete all letters, reactions, and whispers from iCloud for both participants</li>
+        <li><strong>Block a friend</strong> to leave the cove and prevent reconnection</li>
         <li>Uninstalling the app permanently deletes all local data</li>
     </ul>
 
@@ -491,11 +580,11 @@
 
     <!-- Changes -->
     <h2>Changes to This Policy</h2>
-    <p>We may update this policy occasionally. Changes will be reflected with an updated date at the top of this page.</p>
+    <p>We may update this policy occasionally. Changes will be reflected with an updated date at the top of this page. The March 2026 update adds coverage for the Letters to the Ether feature (No.05), including the Letters Desk and Shared Cove.</p>
 
     <!-- Third Party -->
     <h2>Third-Party Services</h2>
-    <p>Reverie Mood uses Apple's native frameworks (SwiftData, AVFoundation) which are subject to <a href="https://www.apple.com/legal/privacy/">Apple's Privacy Policy</a>.</p>
+    <p>Reverie Mood uses Apple's native frameworks (SwiftData, AVFoundation, CloudKit) which are subject to <a href="https://www.apple.com/legal/privacy/">Apple's Privacy Policy</a>. The Shared Cove feature uses Apple's CloudKit for encrypted data exchange between consenting users. No other third-party services are used.</p>
 
     <!-- Contact -->
     <div class="contact-section">
@@ -517,7 +606,7 @@
             <div class="thick"></div>
             <div class="thin"></div>
         </div>
-        <p>© 2026 REVERIE ARCHIVE</p>
+        <p>&copy; 2026 REVERIE ARCHIVE</p>
         <p class="tagline">Your privacy matters.</p>
     </footer>
 </body>
