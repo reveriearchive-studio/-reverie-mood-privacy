@@ -426,165 +426,152 @@
             <div class="thick"></div>
             <div class="thin"></div>
         </div>
-        <div class="edition-date">Last Updated · March 10, 2026</div>
+        <div class="edition-date">Last Updated · May 29, 2026</div>
     </header>
 
     <!-- Quick Summary -->
     <div class="summary-card">
         <h3>At a Glance</h3>
-        <p class="headline">"Your journal stays on your device. Shared letters travel only through Apple's encrypted cloud."</p>
+        <p class="headline">"Your journal stays on your device. Only what you choose to share travels through Apple's cloud."</p>
         <ul class="check-list">
-            <li>Journal data stored locally on your device</li>
-            <li>No third-party servers, analytics, or tracking</li>
-            <li>Shared Cove letters are end-to-end encrypted via iCloud</li>
-            <li>No advertisements</li>
-            <li>You control everything</li>
+            <li>All journal data stored locally on your device</li>
+            <li>No servers, no analytics, no tracking</li>
+            <li>Shared features use Apple's iCloud only</li>
+            <li>Subscriptions processed entirely by Apple</li>
+            <li>No advertisements, ever</li>
         </ul>
     </div>
 
-    <!-- Introduction -->
+    <!-- Philosophy -->
     <h2>Our Philosophy</h2>
-    <p>Reverie Mood, a product of Reverie Archive, is a privacy-first mood tracking journal. We believe your mental health data should remain private and entirely under your control. Your emotional reflections are yours alone.</p>
-    <p>With the introduction of <em>Letters to the Ether</em>, you may choose to exchange letters with a close friend through the Shared Cove. This is the only feature that transmits data beyond your device, and it does so exclusively through Apple's iCloud infrastructure with end-to-end encryption for all letter content.</p>
+    <p>Reverie Mood is a privacy-first mood journal by Reverie Archive. Your emotional reflections are yours alone. Everything you write, record, sketch, and feel stays on your device unless you explicitly choose to share it with a friend through the Shared Cove.</p>
 
-    <!-- What We Store -->
-    <h2>What We Store</h2>
-    <h3>On Your Device Only</h3>
+    <!-- What Stays on Your Device -->
+    <h2>What Stays on Your Device</h2>
+    <p>The vast majority of Reverie Mood lives entirely on your device:</p>
     <ul>
-        <li><strong>Mood Entries</strong> — Your daily emotional states</li>
-        <li><strong>Written Reflections</strong> — Text notes about your feelings</li>
-        <li><strong>Voice Memos</strong> — Audio recordings (morning and evening)</li>
-        <li><strong>Photos</strong> — Images you attach to mood entries</li>
-        <li><strong>Doodles</strong> — Sketches and drawings from the doodle canvas</li>
-        <li><strong>Grounding & Breathing Exercises</strong> — Wellness activity records and progress</li>
-        <li><strong>Letters Desk Postcards</strong> — Personal postcards you compose, keep, release, or burn (never leave your device)</li>
-        <li><strong>Companion Data</strong> — Your Puff companion's name and your display name</li>
-        <li><strong>App Settings</strong> — Your preferences and customizations</li>
+        <li><strong>Mood entries</strong>, written reflections, and voice memos</li>
+        <li><strong>Photos and doodles</strong> attached to entries</li>
+        <li><strong>Breathing and grounding exercises</strong> — activity records and progress</li>
+        <li><strong>Letters to the Ether</strong> — private postcards you compose, keep, release, or burn</li>
+        <li><strong>Ambient sounds and comfort affirmations</strong> — usage preferences</li>
+        <li><strong>Companion data</strong> — your Puff's name and your display name</li>
+        <li><strong>Subscription status</strong> — your Reverie+ entitlement, stored locally for offline access</li>
+        <li><strong>App settings</strong> — all your preferences and customizations</li>
     </ul>
 
-    <!-- Letters to the Ether -->
-    <h2>Letters to the Ether</h2>
-    <p>Feature No.05 in the Quiet Room introduces two spaces for reflective writing. Each handles your data differently:</p>
-
-    <div class="feature-card">
-        <h3>The Letters Desk</h3>
-        <p>A private writing space where you compose postcards for yourself. You can keep them, release them to the ether, or burn them as a cathartic release.</p>
-        <p><strong>All postcards are stored locally on your device only.</strong> Nothing is transmitted. Burned postcards are permanently deleted — only a count is kept for your personal statistics.</p>
-    </div>
+    <!-- What Travels Through iCloud -->
+    <h2>What Travels Through iCloud</h2>
+    <p>Two features in The Quiet Room send data beyond your device — and only through <strong>Apple's iCloud (CloudKit)</strong>. We operate no servers of our own.</p>
 
     <div class="feature-card">
         <h3>The Shared Cove</h3>
-        <p>A quiet space to exchange handwritten-style letters with one close friend. You create a private cove by sharing a QR code, and letters drift between you like messages in bottles.</p>
-        <p>This is the only feature in Reverie Mood that sends data beyond your device. All data travels exclusively through <strong>Apple's iCloud (CloudKit)</strong> — we operate no servers of our own.</p>
+        <p>Exchange handwritten-style letters with a close friend. You create a private cove by sharing a QR code, and letters drift between you like messages in bottles.</p>
+        <p style="margin-top: 12px;"><span class="encrypted-badge">Letter content is end-to-end encrypted</span></p>
+        <p>Only you and your friend can read your letters and whisper replies. Apple cannot read them. We cannot read them.</p>
+        <p>Some metadata (display names, timestamps, delivery status, emoji reactions, and opt-in mood snapshots) is stored in iCloud but is <em>not</em> encrypted. None of it includes your real name or Apple ID.</p>
+    </div>
 
-        <p style="margin-top: 16px;"><span class="encrypted-badge">End-to-End Encrypted</span></p>
-        <ul>
-            <li><strong>Letter content</strong> — encrypted via CloudKit's <code>encryptedValues</code>; only you and your friend can read them</li>
-            <li><strong>Whisper replies</strong> — short inline replies, also end-to-end encrypted</li>
-        </ul>
+    <div class="feature-card">
+        <h3>Shoreline Rituals</h3>
+        <p>Gentle daily intentions you share with a friend — synced through the same iCloud zone as your Shared Cove. Ritual data includes the category (e.g. "walking", "reading"), duration, and daily check-ins with optional short notes. This data is not encrypted.</p>
+    </div>
 
-        <h3 style="margin-top: 20px;">Shared but Not Encrypted</h3>
-        <p>The following metadata is stored in iCloud to enable the feature but is <em>not</em> end-to-end encrypted (Apple may access it under their privacy policy):</p>
+    <div class="feature-card">
+        <h3>Your Controls</h3>
+        <p>You decide what's shared:</p>
         <ul>
-            <li><strong>Display names & emoji avatars</strong> — chosen by you, not your real name or Apple ID</li>
-            <li><strong>Letter categories & delivery mode</strong> — e.g. "freeform" or "drift delivery"</li>
-            <li><strong>Empathy reactions</strong> — e.g. "sending warmth" (5 preset types, no free text)</li>
-            <li><strong>Timestamps</strong> — when letters were sent, delivered, and read</li>
-            <li><strong>Mood snapshots</strong> — your mood shared with your friend (<strong>opt-in, off by default</strong>)</li>
-        </ul>
-
-        <h3 style="margin-top: 20px;">Your Controls</h3>
-        <ul>
-            <li><strong>Mood sharing</strong> — opt-in, disabled by default. Toggle per cove.</li>
-            <li><strong>Read receipts</strong> — can be disabled per cove</li>
-            <li><strong>Leave Cove</strong> — permanently deletes all shared data from iCloud for both participants</li>
-            <li><strong>Block a friend</strong> — prevents reconnection and removes shared data</li>
+            <li><strong>Mood sharing</strong> — off by default. You opt in per cove.</li>
+            <li><strong>Read receipts</strong> — can be toggled off per cove</li>
+            <li><strong>Leave Cove</strong> — permanently deletes all shared data from iCloud for both of you</li>
+            <li><strong>Block</strong> — removes everything and prevents reconnection</li>
         </ul>
     </div>
 
-    <!-- What We Don't Do -->
-    <h2>What We Don't Do</h2>
-    <ul class="check-list cross-list">
-        <li>We don't operate any servers — Shared Cove uses Apple's iCloud only</li>
-        <li>We don't use analytics or tracking</li>
-        <li>We don't share data with third parties</li>
-        <li>We don't sell your information</li>
-        <li>We don't display advertisements</li>
-        <li>We cannot read your encrypted letters or whispers</li>
+    <!-- Reverie+ -->
+    <h2>Reverie+</h2>
+    <p>Reverie Mood offers an optional premium tier. Here's what you should know:</p>
+    <ul>
+        <li><strong>All payments are handled by Apple.</strong> We never see your credit card, billing address, or Apple ID credentials.</li>
+        <li><strong>Plans</strong> include monthly, annual (with a 7-day free trial), and a one-time lifetime purchase.</li>
+        <li><strong>We store your entitlement locally</strong> — just whether you're on the free or premium tier — so the app works offline.</li>
+        <li><strong>Early adopters</strong> who journaled before the introduction of Reverie+ receive a complimentary 30-day courtesy period, detected entirely on-device.</li>
+        <li><strong>Manage or cancel</strong> anytime at <code>Settings → [Your Name] → Subscriptions</code>.</li>
     </ul>
+    <p>Reverie Mood uses <a href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/">Apple's Standard EULA</a> for all in-app purchases.</p>
 
     <!-- Permissions -->
     <h2>Permissions We Request</h2>
     <div class="permission-grid">
         <div class="permission-card">
             <div class="icon">🎙</div>
-            <div class="title">Microphone Access</div>
-            <p><span class="label">Purpose:</span> Record voice memos for your daily reflections</p>
-            <p><span class="label">Processing:</span> Audio stored only on your device</p>
+            <div class="title">Microphone</div>
+            <p>Record voice memos for daily reflections. Audio stays on your device.</p>
         </div>
 
         <div class="permission-card">
             <div class="icon">📷</div>
             <div class="title">Camera & Photos</div>
-            <p><span class="label">Purpose:</span> Attach photos to mood entries and scan Shared Cove QR codes</p>
-            <p><span class="label">Processing:</span> Images stored privately on your device</p>
+            <p>Attach photos to entries and scan Shared Cove QR codes. Images stay on your device.</p>
         </div>
 
         <div class="permission-card">
             <div class="icon">🔔</div>
             <div class="title">Notifications</div>
-            <p><span class="label">Purpose:</span> Daily journal reminders and Shared Cove letter arrival alerts</p>
-            <p><span class="label">Processing:</span> Journal reminders scheduled locally; Cove notifications delivered via Apple's silent push through iCloud</p>
+            <p>Daily journal reminders (scheduled locally) and Shared Cove letter alerts (via iCloud).</p>
         </div>
 
         <div class="permission-card">
             <div class="icon">☁️</div>
             <div class="title">iCloud Account</div>
-            <p><span class="label">Purpose:</span> Required for Shared Cove letter exchange</p>
-            <p><span class="label">Processing:</span> Uses your iCloud identity (an opaque ID, not your email or name) to connect with your friend</p>
+            <p>Required for Shared Cove and Shoreline Rituals. Uses an opaque ID — not your email or name.</p>
         </div>
     </div>
 
-    <!-- iCloud -->
+    <!-- Backups -->
     <h2>iCloud & Backups</h2>
-    <h3>In-App Backup (Optional)</h3>
-    <p>Reverie Mood offers an optional backup feature that saves your journal data to your private iCloud Drive. These backups are stored in your personal Apple account and are not accessible to us. You can create, restore, and delete backups at any time from within the app.</p>
-    <h3>Shared Cove (CloudKit)</h3>
-    <p>The Shared Cove uses Apple's CloudKit to sync letters between you and your friend. Letter content and whisper replies are end-to-end encrypted — neither Apple nor Reverie Archive can read them. This data exists only within a private shared zone in iCloud and is permanently deleted when either participant leaves the cove.</p>
-    <h3>Device-Level iCloud Backup</h3>
-    <p>If you have iCloud Backup enabled on your iOS device, Reverie Mood data <em>may</em> also be included in your device backup. This is controlled by your device settings:</p>
-    <p><code>Settings → [Your Name] → iCloud → Manage Storage → Backups</code></p>
+    <p>Reverie Mood offers an optional in-app backup to your private iCloud Drive. These backups are stored in your personal Apple account and are not accessible to us.</p>
+    <p>If you have device-level iCloud Backup enabled, Reverie Mood data may also be included. You can manage this at <code>Settings → [Your Name] → iCloud → Manage Storage → Backups</code>.</p>
 
-    <!-- Data Deletion -->
-    <h2>Data Deletion</h2>
-    <p>You can delete your data at any time:</p>
+    <!-- Deleting Your Data -->
+    <h2>Deleting Your Data</h2>
+    <p>You're always in control:</p>
     <ul>
-        <li>Delete individual entries (including photos and doodles) from the archive view</li>
-        <li>Delete voice memos from entry details</li>
+        <li>Delete individual entries, voice memos, photos, and doodles from the archive</li>
+        <li>Delete Letters to the Ether postcards, or let released ones expire after 180 days</li>
         <li>Delete iCloud Drive backups from the backup manager</li>
-        <li>Delete Letters Desk postcards individually or let released postcards expire after 180 days</li>
-        <li><strong>Leave a Shared Cove</strong> to permanently delete all letters, reactions, and whispers from iCloud for both participants</li>
-        <li><strong>Block a friend</strong> to leave the cove and prevent reconnection</li>
-        <li>Uninstalling the app permanently deletes all local data</li>
+        <li><strong>Leave a Shared Cove</strong> to permanently erase all letters, rituals, and shared data from iCloud for both participants</li>
+        <li><strong>Cancel your subscription</strong> through Apple ID settings — access continues until the billing period ends, then your local entitlement is cleared</li>
+        <li>Uninstalling the app deletes all local data</li>
     </ul>
 
-    <!-- Children's Privacy -->
+    <!-- What We Don't Do -->
+    <h2>What We Don't Do</h2>
+    <ul class="check-list cross-list">
+        <li>Operate servers — shared features use Apple's iCloud only</li>
+        <li>Use analytics or tracking of any kind</li>
+        <li>Share, sell, or monetize your data</li>
+        <li>Display advertisements</li>
+        <li>See or store your payment information</li>
+        <li>Read your encrypted letters or whispers</li>
+    </ul>
+
+    <!-- Children -->
     <h2>Children's Privacy</h2>
     <p>Reverie Mood is not intended for children under 13. We do not knowingly collect information from children.</p>
 
     <!-- Disclaimer -->
-    <h2>Important Disclaimer</h2>
     <div class="disclaimer">
-        <p><strong>Reverie Mood is not a medical app.</strong> It's designed for personal wellness tracking only. If you're experiencing mental health concerns, please consult a qualified healthcare professional.</p>
+        <p><strong>Reverie Mood is not a medical app.</strong> It's a personal wellness journal. If you're experiencing mental health concerns, please reach out to a qualified professional.</p>
     </div>
-
-    <!-- Changes -->
-    <h2>Changes to This Policy</h2>
-    <p>We may update this policy occasionally. Changes will be reflected with an updated date at the top of this page. The March 2026 update adds coverage for the Letters to the Ether feature (No.05), including the Letters Desk and Shared Cove.</p>
 
     <!-- Third Party -->
     <h2>Third-Party Services</h2>
-    <p>Reverie Mood uses Apple's native frameworks (SwiftData, AVFoundation, CloudKit) which are subject to <a href="https://www.apple.com/legal/privacy/">Apple's Privacy Policy</a>. The Shared Cove feature uses Apple's CloudKit for encrypted data exchange between consenting users. No other third-party services are used.</p>
+    <p>Reverie Mood uses Apple's native frameworks — SwiftData, AVFoundation, CloudKit, and StoreKit — which are subject to <a href="https://www.apple.com/legal/privacy/">Apple's Privacy Policy</a>. No other third-party services are used.</p>
+
+    <!-- Changes -->
+    <h2>Changes to This Policy</h2>
+    <p>We may update this policy occasionally. Changes are reflected with an updated date at the top of this page. This May 2026 edition adds Reverie+ subscription coverage and Shoreline Rituals, and restructures the Quiet Room section.</p>
 
     <!-- Contact -->
     <div class="contact-section">
