@@ -8,8 +8,8 @@
         @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Source+Serif+4:ital,wght@0,400;0,600;1,400&family=JetBrains+Mono:wght@400;500&display=swap');
 
         :root {
-            --bg: #FAF8F5;
-            --surface: #F5F3F0;
+            --bg: #E3DFD6;
+            --surface: #ECE9E1;
             --surface-raised: #FFFFFF;
             --text-primary: #1C1917;
             --text-secondary: #57534E;
@@ -417,6 +417,18 @@
     </style>
 </head>
 <body>
+    <!-- Vintage "Special Edition" frame -->
+    <style>
+        .gazette-frame{position:fixed;inset:16px;border:1.5px solid #91222C;pointer-events:none;z-index:90}
+        .gazette-frame i{position:absolute;width:13px;height:13px;background:#91222C}
+        .gazette-frame i.tl{top:-7px;left:-7px}
+        .gazette-frame i.tr{top:-7px;right:-7px}
+        .gazette-frame i.bl{bottom:-7px;left:-7px}
+        .gazette-frame i.br{bottom:-7px;right:-7px}
+        @media (max-width:480px){.gazette-frame{inset:10px}.gazette-frame i{width:11px;height:11px}}
+    </style>
+    <div class="gazette-frame" aria-hidden="true"><i class="tl"></i><i class="tr"></i><i class="bl"></i><i class="br"></i></div>
+
     <!-- Masthead -->
     <header class="masthead">
         <div class="masthead-label">The Official Privacy Statement of</div>
