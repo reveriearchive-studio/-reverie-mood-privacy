@@ -14,7 +14,11 @@
     font-family:Georgia,"Times New Roman",serif; line-height:1.6;
     padding:48px 20px;
   }
-  .wrap{max-width:680px;margin:0 auto}
+  .wrap{max-width:680px;margin:0 auto;position:relative;border:1.5px solid var(--accent);padding:48px 42px}
+  .wrap .corner{position:absolute;width:13px;height:13px;background:var(--accent)}
+  .wrap .tl{top:-7px;left:-7px}.wrap .tr{top:-7px;right:-7px}
+  .wrap .bl{bottom:-7px;left:-7px}.wrap .br{bottom:-7px;right:-7px}
+  @media (max-width:480px){.wrap{padding:34px 22px}.wrap .corner{width:11px;height:11px}}
   .eyebrow{letter-spacing:.28em;font-size:13px;color:var(--accent);text-transform:uppercase;text-align:center}
   h1{font-size:40px;text-align:center;margin:.2em 0 .1em;font-weight:bold}
   .sub{text-align:center;color:var(--muted);font-style:italic;margin-bottom:28px}
@@ -27,19 +31,8 @@
 </style>
 </head>
 <body>
-  <!-- Vintage "Special Edition" frame -->
-  <style>
-    .gazette-frame{position:fixed;inset:16px;border:1.5px solid #91222C;pointer-events:none;z-index:90}
-    .gazette-frame i{position:absolute;width:13px;height:13px;background:#91222C}
-    .gazette-frame i.tl{top:-7px;left:-7px}
-    .gazette-frame i.tr{top:-7px;right:-7px}
-    .gazette-frame i.bl{bottom:-7px;left:-7px}
-    .gazette-frame i.br{bottom:-7px;right:-7px}
-    @media (max-width:480px){.gazette-frame{inset:10px}.gazette-frame i{width:11px;height:11px}}
-  </style>
-  <div class="gazette-frame" aria-hidden="true"><i class="tl"></i><i class="tr"></i><i class="bl"></i><i class="br"></i></div>
-
   <div class="wrap">
+    <i class="corner tl" aria-hidden="true"></i><i class="corner tr" aria-hidden="true"></i><i class="corner bl" aria-hidden="true"></i><i class="corner br" aria-hidden="true"></i>
     <div class="eyebrow">The Daily Emotional Gazette</div>
     <h1>Reverie Mood — Support</h1>
     <p class="sub">A gentle companion for your emotional well-being.</p>
