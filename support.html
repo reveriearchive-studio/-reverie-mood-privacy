@@ -6,7 +6,7 @@
 <title>Reverie Mood — Support</title>
 <style>
   :root{
-    --paper:#F4EEE2; --ink:#2B2318; --muted:#6A5E4C; --accent:#91222C; --rule:#D8CDBA;
+    --paper:#E3DFD6; --ink:#2B2318; --muted:#6A5E4C; --accent:#91222C; --rule:#CFC9BD;
   }
   *{box-sizing:border-box}
   body{
@@ -27,6 +27,18 @@
 </style>
 </head>
 <body>
+  <!-- Vintage "Special Edition" frame -->
+  <style>
+    .gazette-frame{position:fixed;inset:16px;border:1.5px solid #91222C;pointer-events:none;z-index:90}
+    .gazette-frame i{position:absolute;width:13px;height:13px;background:#91222C}
+    .gazette-frame i.tl{top:-7px;left:-7px}
+    .gazette-frame i.tr{top:-7px;right:-7px}
+    .gazette-frame i.bl{bottom:-7px;left:-7px}
+    .gazette-frame i.br{bottom:-7px;right:-7px}
+    @media (max-width:480px){.gazette-frame{inset:10px}.gazette-frame i{width:11px;height:11px}}
+  </style>
+  <div class="gazette-frame" aria-hidden="true"><i class="tl"></i><i class="tr"></i><i class="bl"></i><i class="br"></i></div>
+
   <div class="wrap">
     <div class="eyebrow">The Daily Emotional Gazette</div>
     <h1>Reverie Mood — Support</h1>
@@ -36,7 +48,7 @@
       <strong>Need help?</strong> Email us and we'll get back to you, usually within
       a couple of days.<br />
       <!-- TODO: replace with your preferred support email before publishing -->
-      ✉️ <a href="mailto:support@example.com">support@example.com</a>
+      ✉️ <a href="mailto:reveriearchive.studio@gmail.com">reveriearchive.studio@gmail.com</a>
     </div>
 
     <hr />
